@@ -1,4 +1,1 @@
-﻿  Building Custom Rule D:/Projecten/Project_RT2D/Game_Emulator/rt2d/external/CMakeLists.txt
-  CMake does not need to re-run because D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/external/CMakeFiles/generate.stamp is up-to-date.
-  glew.c
-  GLEW_190.vcxproj -> D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\external\Debug\GLEW_190.lib
+﻿  GLEW_190.vcxproj -> D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\external\Debug\GLEW_190.lib

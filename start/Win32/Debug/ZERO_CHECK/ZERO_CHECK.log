@@ -1,11 +1,1 @@
-﻿  Checking Build System
-  CMake is re-running because D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/CMakeFiles/generate.stamp is out-of-date.
-    the file 'D:/Projecten/Project_RT2D/Game_Emulator/rt2d/CMakeLists.txt'
-    is newer than 'D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/CMakeFiles/generate.stamp.depend'
-    result='-1'
-  -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
-  -- Using Win32 for window creation
-  -- Using WGL for context creation
-  -- Configuring done
-  -- Generating done
-  -- Build files have been written to: D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start
+﻿
