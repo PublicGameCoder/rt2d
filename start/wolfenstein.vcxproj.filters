@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\projects\wolfenstein\wolfenstein.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\projects\wolfenstein\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DD971A17-C93A-3183-A084-13BB2AF3C83C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

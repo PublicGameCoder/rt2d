@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{359DE48A-0BE2-3346-8E97-5A23CDFF6A6F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>rt2d</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">rt2d.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">rt2d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">rt2d.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">rt2d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">rt2d.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">rt2d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">rt2d.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">rt2d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4514</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4514</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4514</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4514</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\include\GLFW;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glm-0.9.8.4;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glew-1.9.0\include;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Projecten/Project_RT2D/Game_Emulator/rt2d/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\Appdata\CMake\bin\cmake.exe -HD:/Projecten/Project_RT2D/Game_Emulator/rt2d -BD:/Projecten/Project_RT2D/Game_Emulator/rt2d/start --check-stamp-file D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Projecten/Project_RT2D/Game_Emulator/rt2d/CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeSystem.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeCCompiler.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeCXXCompiler.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeRCCompiler.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\CreateLaunchers.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\CleanDirectoryList.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\MSVCMultipleProcessCompile.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\ListCombinations.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindOpenGL.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Projecten/Project_RT2D/Game_Emulator/rt2d/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\Appdata\CMake\bin\cmake.exe -HD:/Projecten/Project_RT2D/Game_Emulator/rt2d -BD:/Projecten/Project_RT2D/Game_Emulator/rt2d/start --check-stamp-file D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Projecten/Project_RT2D/Game_Emulator/rt2d/CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeSystem.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeCCompiler.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeCXXCompiler.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeRCCompiler.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\CreateLaunchers.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\CleanDirectoryList.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\MSVCMultipleProcessCompile.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\ListCombinations.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindOpenGL.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Projecten/Project_RT2D/Game_Emulator/rt2d/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+D:\Appdata\CMake\bin\cmake.exe -HD:/Projecten/Project_RT2D/Game_Emulator/rt2d -BD:/Projecten/Project_RT2D/Game_Emulator/rt2d/start --check-stamp-file D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Projecten/Project_RT2D/Game_Emulator/rt2d/CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeSystem.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeCCompiler.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeCXXCompiler.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeRCCompiler.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\CreateLaunchers.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\CleanDirectoryList.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\MSVCMultipleProcessCompile.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\ListCombinations.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindOpenGL.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Projecten/Project_RT2D/Game_Emulator/rt2d/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+D:\Appdata\CMake\bin\cmake.exe -HD:/Projecten/Project_RT2D/Game_Emulator/rt2d -BD:/Projecten/Project_RT2D/Game_Emulator/rt2d/start --check-stamp-file D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Projecten/Project_RT2D/Game_Emulator/rt2d/CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeSystem.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeCCompiler.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeCXXCompiler.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\3.9.6\CMakeRCCompiler.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\CreateLaunchers.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\CleanDirectoryList.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\MSVCMultipleProcessCompile.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\rpavlik-cmake-modules-1c73e35\ListCombinations.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindOpenGL.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\camera.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\camera.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\canvas.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\canvas.h" />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\color.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\core.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\core.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\entity.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\entity.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\input.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\input.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\line.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\line.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\mesh.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\mesh.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\noise.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\noise.h" />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\pointx.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\renderer.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\renderer.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\resourcemanager.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\resourcemanager.h" />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\rt2dconfig.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\scene.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\scene.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\shader.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\shader.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\sprite.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\sprite.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\text.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\text.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\texture.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\texture.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\timer.cpp"  />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\timer.h" />
+    <ClCompile Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\util.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\util.h" />
+    <ClInclude Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\rt2d\vectorx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\ZERO_CHECK.vcxproj">
+      <Project>{CDE0A5C3-CF97-320E-A8BF-778BC90799AF}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

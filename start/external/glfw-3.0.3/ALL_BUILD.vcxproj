@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1984D261-BBEC-37AC-B4C7-3B870B8EC62E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Projecten/Project_RT2D/Game_Emulator/rt2d/external/glfw-3.0.3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\Appdata\CMake\bin\cmake.exe -HD:/Projecten/Project_RT2D/Game_Emulator/rt2d -BD:/Projecten/Project_RT2D/Game_Emulator/rt2d/start --check-stamp-file D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/external/glfw-3.0.3/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Projecten/Project_RT2D/Game_Emulator/rt2d/external/glfw-3.0.3/CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\CMakeLists.txt;D:\Appdata\CMake\share\cmake-3.9\Modules\FindOpenGL.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindThreads.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckLibraryExists.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckSymbolExists.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckIncludeFile.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindDoxygen.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\docs\Doxyfile.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\config.h.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\glfwConfig.cmake.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\glfwConfigVersion.cmake.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\external\glfw-3.0.3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Projecten/Project_RT2D/Game_Emulator/rt2d/external/glfw-3.0.3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\Appdata\CMake\bin\cmake.exe -HD:/Projecten/Project_RT2D/Game_Emulator/rt2d -BD:/Projecten/Project_RT2D/Game_Emulator/rt2d/start --check-stamp-file D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/external/glfw-3.0.3/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Projecten/Project_RT2D/Game_Emulator/rt2d/external/glfw-3.0.3/CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\CMakeLists.txt;D:\Appdata\CMake\share\cmake-3.9\Modules\FindOpenGL.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindThreads.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckLibraryExists.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckSymbolExists.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckIncludeFile.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindDoxygen.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\docs\Doxyfile.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\config.h.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\glfwConfig.cmake.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\glfwConfigVersion.cmake.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\external\glfw-3.0.3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Projecten/Project_RT2D/Game_Emulator/rt2d/external/glfw-3.0.3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+D:\Appdata\CMake\bin\cmake.exe -HD:/Projecten/Project_RT2D/Game_Emulator/rt2d -BD:/Projecten/Project_RT2D/Game_Emulator/rt2d/start --check-stamp-file D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/external/glfw-3.0.3/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Projecten/Project_RT2D/Game_Emulator/rt2d/external/glfw-3.0.3/CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\CMakeLists.txt;D:\Appdata\CMake\share\cmake-3.9\Modules\FindOpenGL.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindThreads.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckLibraryExists.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckSymbolExists.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckIncludeFile.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindDoxygen.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\docs\Doxyfile.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\config.h.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\glfwConfig.cmake.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\glfwConfigVersion.cmake.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\external\glfw-3.0.3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Projecten/Project_RT2D/Game_Emulator/rt2d/external/glfw-3.0.3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+D:\Appdata\CMake\bin\cmake.exe -HD:/Projecten/Project_RT2D/Game_Emulator/rt2d -BD:/Projecten/Project_RT2D/Game_Emulator/rt2d/start --check-stamp-file D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/external/glfw-3.0.3/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Projecten/Project_RT2D/Game_Emulator/rt2d/external/glfw-3.0.3/CMakeLists.txt;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\CMakeLists.txt;D:\Appdata\CMake\share\cmake-3.9\Modules\FindOpenGL.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindThreads.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckLibraryExists.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckSymbolExists.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\CheckIncludeFile.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindDoxygen.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\Appdata\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\docs\Doxyfile.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\config.h.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\glfwConfig.cmake.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\src\glfwConfigVersion.cmake.in;D:\Projecten\Project_RT2D\Game_Emulator\rt2d\external\glfw-3.0.3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\external\glfw-3.0.3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\ZERO_CHECK.vcxproj">
+      <Project>{CDE0A5C3-CF97-320E-A8BF-778BC90799AF}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\external\glfw-3.0.3\src\GLFW_303.vcxproj">
+      <Project>{1436A2C7-0515-393C-AE9C-C6E425D580F9}</Project>
+      <Name>GLFW_303</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

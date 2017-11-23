@@ -1,0 +1,11 @@
+﻿  camera.cpp
+  canvas.cpp
+  core.cpp
+  entity.cpp
+  input.cpp
+  renderer.cpp
+  resourcemanager.cpp
+  scene.cpp
+  sprite.cpp
+  text.cpp
+  rt2d.vcxproj -> D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\Debug\rt2d.lib

@@ -5,13 +5,13 @@ project (rt2d)
 # delete CMakeCache.txt from the build directory when you edit these options
 ####################################################################
 OPTION(MAKE_START "Make RT2D start application" ON)
-OPTION(MAKE_DEMO "Make RT2D demo (tests) application" ON)
-OPTION(MAKE_FLOCKING "Make flocking application" ON)
-OPTION(MAKE_BASIC3D "Make basic3D application" ON)
-OPTION(MAKE_NOISE "Make Perlin Noise application" ON)
-OPTION(MAKE_GEOMETRIC "Make GeoMetric application" ON)
-OPTION(MAKE_SHADY "Make custom Shader application" ON)
-OPTION(MAKE_WOLFENSTEIN "Make Wolfenstein3D raycasting application" ON)
+OPTION(MAKE_DEMO "Make RT2D demo (tests) application" OFF)
+OPTION(MAKE_FLOCKING "Make flocking application" OFF)
+OPTION(MAKE_BASIC3D "Make basic3D application" OFF)
+OPTION(MAKE_NOISE "Make Perlin Noise application" OFF)
+OPTION(MAKE_GEOMETRIC "Make GeoMetric application" OFF)
+OPTION(MAKE_SHADY "Make custom Shader application" OFF)
+OPTION(MAKE_WOLFENSTEIN "Make Wolfenstein3D raycasting application" OFF)
 
 OPTION(USE_RS232 "Use RS232 library" OFF)
 OPTION(MAKE_SERIAL "Make serial application" OFF)
@@ -156,10 +156,18 @@ file(
 IF(MAKE_START)
 	add_executable(start
 		start/main.cpp
-		start/myentity.cpp
-		start/myentity.h
-		start/myscene.cpp
-		start/myscene.h
+		start/Frog.cpp
+		start/Frog.h
+		start/LilyPad.cpp
+		start/LilyPad.h
+		start/GameScene.cpp
+		start/GameScene.h
+		start/GridEntity.cpp
+		start/GridEntity.h
+		start/ScoreManager.cpp
+		start/ScoreManager.h
+		start/GameManager.cpp
+		start/GameManager.h
 	)
 	target_link_libraries(start
 		${ALL_GRAPHICS_LIBS}
