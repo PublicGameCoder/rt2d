@@ -3,8 +3,9 @@
 LilyPad::LilyPad() : Entity()
 {
 	this->addSprite("assets/lilypad.tga");
-	this->scale = Point3(0.8,0.8,0.8);
-	//std::cout << "LilypadSprite added" << std::endl;
+	this->sprite()->size = Point2(96, 96);
+	//this->sprite()->setupSprite("assets/lilypad.tga", 0,0, 1.0f / 128, 1.0f / 128);
+	this->scale = Point3(0.85,0.85,1);
 }
 
 LilyPad::~LilyPad()
@@ -14,18 +15,11 @@ LilyPad::~LilyPad()
 
 void LilyPad::update(float deltaTime)
 {
-	if (this == NULL) return;
+	/*
 	if (input()->getMouseDown(0) && this->isCursorOnObject2d()) {
 		std::cout << "Clicked on lilypad!" << std::endl;
 	}
-}
-
-Point3 LilyPad::getSizePerspective() {
-	return Point3(this->sprite()->size.x * this->scale.x, this->sprite()->size.y * this->scale.y, 0);
-}
-
-Point3 LilyPad::getSize() {
-	return Point3(this->sprite()->size.x, this->sprite()->size.y, 0);
+	*/
 }
 
 bool LilyPad::isCursorOnObject2d() {

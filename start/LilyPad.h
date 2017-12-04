@@ -18,8 +18,6 @@ public:
 	virtual void update(float deltaTime);
 
 	bool isCursorOnObject2d();
-	Point3 getSizePerspective();
-	Point3 getSize();
 
 	void setGridPos(Point2 newGridPos) {
 		gridPos = newGridPos;

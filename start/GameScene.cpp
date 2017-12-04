@@ -10,41 +10,71 @@
 #include "GameScene.h"
 
 
-GameScene::GameScene() : Scene()
+GameScene::GameScene(std::vector<std::vector<char>> selectedgrid) : Scene()
 {
+	numbergrid = selectedgrid;
+
 	bgColor = new RGBAColor(
 		(uint8_t)0,
 		(uint8_t)0,
 		(uint8_t)255
 		);
 
-	LilyPad* lilyPad = new LilyPad();
+	LilyPad* testLily = new LilyPad();
 
-	gridwidth = 3;
-	gridheight = 3;
+	Point2 dimensions = testLily->sprite()->size;
+	cellwidth = dimensions.x;
+	cellheight = dimensions.y;
 
-	std::vector<std::vector<int>> numbergrid {
+	delete testLily;
+	border = 1;
+
+	/*
+	//Example grid
+	numbergrid = {
 		{ 1, 1, 1 },
 		{ 1, 1, 1 },
 		{ 0, 2, 0 },
 	};
+	*/
+	createGrid();
+}
 
-	cellwidth = 128;//lilyPad->getSize().x;
-	cellheight = 128;//lilyPad->getSize().y;
-	border = 1;
+void GameScene::resetLevel() {
+	for (int i = 0; i < lilypads.size(); i++) {
+		lilypads[i] = NULL;
+	}
 
-	delete lilyPad;
+	//if (!grid)return;
+	for (int i = 0; i < grid->children().size(); i++) {
+		Entity* entity = grid->getChild(i);
+		if (!entity)continue;
+		grid->removeChild(entity);
+		delete entity;
+	}
 
+	delete grid;
+	createGrid();
+}
+
+void GameScene::createGrid() {
+	if (numbergrid.size() <= 0 || numbergrid[0].size() <= 0) {
+		return;
+	}
+	gridheight = numbergrid.size();
+	gridwidth = numbergrid[0].size();
 	grid = new GridEntity();
 	int xgridpos = (SWIDTH / 2) - (gridwidth*(cellwidth + border) / 2);
 	int ygridpos = (SHEIGHT / 2) - (gridheight*(cellheight + border) / 2);
 	grid->position = Point2(xgridpos, ygridpos);
 
+	Point2 frogPos;
+
 	// create cells
 	for (int y = 0; y<gridheight; y++) {
 		for (int x = 0; x<gridwidth; x++) {
-			int dataStore = numbergrid[y][x];
-			if (dataStore == 0) {
+			short int dataStore = numbergrid[y][x];
+			if ((dataStore) == 0) {
 				Cell* cell = new Cell();
 				cell->position.x = x;
 				cell->position.y = y;
@@ -80,7 +110,8 @@ GameScene::GameScene() : Scene()
 				lilypads.push_back(cell->lilyPad);
 				grid->addChild(cell->lilyPad);
 				//std::cout << ("Lilypad placed! at:" + std::to_string(cell->lilyPad->position.x)+" | "+ std::to_string(cell->lilyPad->position.x) ) << std::endl;
-			} else if (dataStore == 2) {
+			}
+			else if (dataStore == 2) {
 				Cell* cell = new Cell();
 				cell->position.x = x;
 				cell->position.y = y;
@@ -98,15 +129,18 @@ GameScene::GameScene() : Scene()
 				lilypads.push_back(cell->lilyPad);
 				grid->addChild(cell->lilyPad);
 
-				playerFrog = new Frog();
-				playerFrog->setGridPos(Point2(x, y));
-				playerFrog->position.x = x*(cellwidth + border);
-				playerFrog->position.y = y*(cellwidth + border);
-				grid->addChild(playerFrog);
+				frogPos = Point2(x, y);
 				//std::cout << ("Lilypad placed! at:" + std::to_string(cell->lilyPad->position.x) + " | " + std::to_string(cell->lilyPad->position.x)) << std::endl;
 			}
 		}
 	}
+	playerFrog = new Frog();
+	playerFrog->setGridPos(frogPos);
+	Point3 frogsPosition;
+	frogsPosition.x = frogPos.x*(cellwidth + border);
+	frogsPosition.y = frogPos.y*(cellwidth + border);
+	playerFrog->setPosition(frogsPosition);
+	grid->addChild(playerFrog);
 
 	this->addChild(grid);
 }
@@ -118,6 +152,7 @@ GameScene::~GameScene()
 		lilypads[i] = NULL;
 	}
 
+	//if (!grid)return;
 	for (int i = 0; i < grid->children().size(); i++) {
 		Entity* entity = grid->getChild(i);
 		if (!entity)continue;
@@ -140,13 +175,10 @@ void GameScene::update(float deltaTime)
 	if (input()->getMouseDown(0)) {
 		handleMovement();
 	}
-
-	if (isFinished()) {
-		std::cout << "FINISHED!" << std::endl;
-	}
 }
 
 bool GameScene::isFinished() {
+	if (playerFrog->isTimedOut())return false;
 	int lilypadsLeftOver = 0;
 	int s = lilypads.size();
 	for (int i = 0; i < s; i++) {
@@ -164,35 +196,76 @@ bool GameScene::isFinished() {
 }
 
 void GameScene::handleMovement() {
+	if (playerFrog->isTimedOut())return;
 	Point2 gridPosFrog = playerFrog->getGridPos();
 	LilyPad* lilyPad = getClickedLilyPad();
 	if (!lilyPad) { return; }
 	Point2 gridPosLily = lilyPad->getGridPos();
+	if (gridPosFrog == gridPosLily) { return; }
 
-	if (gridPosFrog.x == gridPosLily.x || gridPosFrog.y == gridPosLily.y ) {
-		Point3 dir = playerFrog->position - lilyPad->position;
-		if (dir.x > 0) {
-			playerFrog->rotation.z = (-90 * DEG_TO_RAD);
+	Point2 facing = playerFrog->facing();//Get's the facing of the frog
+	bool xrow = (gridPosFrog.x == gridPosLily.x);//True if the x positions on the grid are the same.
+	bool yrow = (gridPosFrog.y == gridPosLily.y);//True if the y positions on the grid are the same.
+	if (xrow | yrow) {
+		if (xrow) {
+			int x = gridPosFrog.x;
+			int curY = gridPosFrog.y;
+			int amountBetween = gridPosLily.y - gridPosFrog.y;
+			bool negative = (amountBetween < 0);
+			if (negative) {
+				amountBetween *= -1;
+			}
+			for (int y = 1; y < amountBetween; y++) {
+				LilyPad* lilyBetween = getLilyPadByGridPos(Point2(x, curY + ((negative) ? (y * -1) : y)));
+				if (!lilyBetween)continue;
+				if (lilyBetween != lilyPad) return;
+			}
 		}
-		if (dir.x < 0) {
+		else if (yrow) {
+			int y = gridPosFrog.y;
+			int curX = gridPosFrog.x;
+			int amountBetween = gridPosLily.x - gridPosFrog.x;
+			bool negative = (amountBetween < 0);
+			if (negative) {
+				amountBetween *= -1;
+			}
+			for (int x = 1; x < amountBetween; x++) {
+				LilyPad* lilyBetween = getLilyPadByGridPos(Point2(curX + ((negative) ? (x * -1) : 1), y));
+				if (!lilyBetween)continue;
+				if (lilyBetween != lilyPad) return;
+			}
+		}
+
+		Point3 dir = lilyPad->position - playerFrog->position;
+
+		//std::cout << std::to_string(facing.x) + " | " + std::to_string(facing.y) << std::endl;
+
+		//Right
+		if (dir.x > 0) {
+			if (facing.x == -1)return;//Facing Left
 			playerFrog->rotation.z = (90 * DEG_TO_RAD);
 		}
-		if (dir.y > 0) {
-			playerFrog->rotation.z = (0 * DEG_TO_RAD);
+		//Left
+		if (dir.x < 0) {
+			if (facing.x == 1)return;//Facing Right
+			playerFrog->rotation.z = (-90 * DEG_TO_RAD);
 		}
-		if (dir.y < 0) {
+		//Down
+		if (dir.y > 0) {
+			if (facing.y == -1)return;//Facing Up
 			playerFrog->rotation.z = (180 * DEG_TO_RAD);
+		}
+		//Up
+		if (dir.y < 0) {
+			if (facing.y == 1)return;//Facing Down
+			playerFrog->rotation.z = (360 * DEG_TO_RAD);
 		}
 
 		Point2 gridPos = playerFrog->getGridPos();
-		playerFrog->position = lilyPad->position;
+		playerFrog->moveTowards(lilyPad->position);
 		playerFrog->setGridPos(gridPosLily);
 		LilyPad* prevLily = getLilyPadByGridPos(gridPos);
-		if (!prevLily) {
-			//std::cout << "Prev lily == null" << std::endl;
-		}
-		else {
-
+		if (prevLily) {
 			removeLilyPad(prevLily);
 		}
 	}

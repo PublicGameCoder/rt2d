@@ -3,28 +3,37 @@
 
 #include <rt2d/entity.h>
 
-/// @brief The MyScene class is the Scene implementation.
 class Frog : public Entity
 {
 public:
-	/// @brief Constructor
+
 	Frog();
-	/// @brief Destructor
+
 	virtual ~Frog();
 
-	/// @brief update is automatically called every frame
-	/// @param deltaTime the elapsed time in seconds
-	/// @return void
 	virtual void update(float deltaTime);
 
 	void setGridPos(Point2 newGridPos) {
 		gridPos = newGridPos;
 	}
 
+	void setPosition(Point3 otherPosition);
+	void moveTowards(Point3 otherPosition);
+
 	Point2 getGridPos() { return gridPos; }
 
+	Point2 facing();
+
+	bool isTimedOut();
+
 private:
+	Point3 destination;
 	Point2 gridPos = Point2(0,0);
+	float distance(Point3 pos1, Point3 pos2);
+	bool timedOut = false;
+	void isTimedOut(bool state) {
+		timedOut = state;
+	}
 };
 
 #endif /* FROG_H */

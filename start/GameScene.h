@@ -27,7 +27,7 @@ class GameScene : public Scene
 {
 public:
 	/// @brief Constructor
-	GameScene();
+	GameScene(std::vector<std::vector<char>> selectedgrid);
 	/// @brief Destructor
 	virtual ~GameScene();
 
@@ -40,7 +40,7 @@ public:
 	void removeLilyPad(LilyPad*);
 	void removeFrog();
 
-
+	void resetLevel();
 	/// @brief update is automatically called every frame
 	/// @param deltaTime the elapsed time in seconds
 	/// @return void
@@ -62,6 +62,14 @@ private:
 	int cellwidth;
 	int cellheight;
 	int border;
+protected:
+	std::vector<std::vector<char>> numbergrid {
+		{ 1, 1, 1 },
+		{ 1, 1, 1 },
+		{ 0, 2, 0 },
+	};
+
+	void createGrid();
 };
 
 #endif /* GAMESCENE_H */

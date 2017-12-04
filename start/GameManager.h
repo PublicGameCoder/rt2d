@@ -2,9 +2,13 @@
 #define GAMEMANAGER_H
 
 #include <rt2d/core.h>
+#include <rt2d/input.h>
+#include <rt2d/singleton.h>
 
 #include "GameScene.h"
-#include "Scoremanager.h"
+
+#include "LevelLoader.h"
+
 
 class GameManager {
 public:
@@ -15,9 +19,8 @@ public:
 
 	void start();
 
-	static ScoreManager* getScoreManager() { return GameManager::sm; };
 private:
-	static ScoreManager* GameManager::sm;
+	Input* input;
 };
 
 #endif // !GAMEMANAGER_H

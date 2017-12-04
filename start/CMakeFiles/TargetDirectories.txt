@@ -1,7 +1,0 @@
-D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/CMakeFiles/start.dir
-D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/CMakeFiles/rt2d.dir
-D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/CMakeFiles/ALL_BUILD.dir
-D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/CMakeFiles/ZERO_CHECK.dir
-D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/external/CMakeFiles/GLEW_190.dir
-D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/external/glfw-3.0.3/CMakeFiles/ALL_BUILD.dir
-D:/Projecten/Project_RT2D/Game_Emulator/rt2d/start/external/glfw-3.0.3/src/CMakeFiles/GLFW_303.dir

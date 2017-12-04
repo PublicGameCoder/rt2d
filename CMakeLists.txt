@@ -164,10 +164,10 @@ IF(MAKE_START)
 		start/GameScene.h
 		start/GridEntity.cpp
 		start/GridEntity.h
-		start/ScoreManager.cpp
-		start/ScoreManager.h
 		start/GameManager.cpp
 		start/GameManager.h
+		start/LevelLoader.cpp
+		start/LevelLoader.h
 	)
 	target_link_libraries(start
 		${ALL_GRAPHICS_LIBS}
@@ -175,6 +175,10 @@ IF(MAKE_START)
 	# Copy assets to the build directory
 	file(
 		COPY start/assets
+		DESTINATION ${CMAKE_BINARY_DIR}
+	)
+	file(
+		COPY start/leveldatas
 		DESTINATION ${CMAKE_BINARY_DIR}
 	)
 ENDIF()
