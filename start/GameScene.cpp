@@ -1,9 +1,3 @@
-/**
- * This class describes MyScene behavior.
- *
- * Copyright 2015 Your Name <you@yourhost.com>
- */
-
 #include <fstream>
 #include <sstream>
 
@@ -29,14 +23,6 @@ GameScene::GameScene(std::vector<std::vector<char>> selectedgrid) : Scene()
 	delete testLily;
 	border = 1;
 
-	/*
-	//Example grid
-	numbergrid = {
-		{ 1, 1, 1 },
-		{ 1, 1, 1 },
-		{ 0, 2, 0 },
-	};
-	*/
 	createGrid();
 }
 
@@ -45,7 +31,6 @@ void GameScene::resetLevel() {
 		lilypads[i] = NULL;
 	}
 
-	//if (!grid)return;
 	for (int i = 0; i < grid->children().size(); i++) {
 		Entity* entity = grid->getChild(i);
 		if (!entity)continue;
@@ -85,7 +70,6 @@ void GameScene::createGrid() {
 				cell->entity->sprite()->size.x = cellwidth;
 				cell->entity->sprite()->size.y = cellheight;
 
-				// initial position
 				cell->entity->position.x = x*(cellwidth + border);
 				cell->entity->position.y = y*(cellheight + border);
 
@@ -102,14 +86,12 @@ void GameScene::createGrid() {
 				cell->lilyPad->sprite()->size.x = cellwidth;
 				cell->lilyPad->sprite()->size.y = cellheight;
 
-				// initial position
 				cell->lilyPad->position.x = x*(cellwidth + border);
 				cell->lilyPad->position.y = y*(cellheight + border);
 
 				cells.push_back(cell);
 				lilypads.push_back(cell->lilyPad);
 				grid->addChild(cell->lilyPad);
-				//std::cout << ("Lilypad placed! at:" + std::to_string(cell->lilyPad->position.x)+" | "+ std::to_string(cell->lilyPad->position.x) ) << std::endl;
 			}
 			else if (dataStore == 2) {
 				Cell* cell = new Cell();
@@ -121,7 +103,6 @@ void GameScene::createGrid() {
 				cell->lilyPad->sprite()->size.x = cellwidth;
 				cell->lilyPad->sprite()->size.y = cellheight;
 
-				// initial position
 				cell->lilyPad->position.x = x*(cellwidth + border);
 				cell->lilyPad->position.y = y*(cellheight + border);
 
@@ -130,7 +111,6 @@ void GameScene::createGrid() {
 				grid->addChild(cell->lilyPad);
 
 				frogPos = Point2(x, y);
-				//std::cout << ("Lilypad placed! at:" + std::to_string(cell->lilyPad->position.x) + " | " + std::to_string(cell->lilyPad->position.x)) << std::endl;
 			}
 		}
 	}
@@ -152,7 +132,6 @@ GameScene::~GameScene()
 		lilypads[i] = NULL;
 	}
 
-	//if (!grid)return;
 	for (int i = 0; i < grid->children().size(); i++) {
 		Entity* entity = grid->getChild(i);
 		if (!entity)continue;
@@ -165,9 +144,6 @@ GameScene::~GameScene()
 
 void GameScene::update(float deltaTime)
 {
-	// ###############################################################
-	// Escape key stops the Scene
-	// ###############################################################
 	if (input()->getKeyUp(KeyCode::Escape)) {
 		this->stop();
 	}
@@ -237,8 +213,6 @@ void GameScene::handleMovement() {
 		}
 
 		Point3 dir = lilyPad->position - playerFrog->position;
-
-		//std::cout << std::to_string(facing.x) + " | " + std::to_string(facing.y) << std::endl;
 
 		//Right
 		if (dir.x > 0) {

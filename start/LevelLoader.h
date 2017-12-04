@@ -1,4 +1,11 @@
+/**
+ * @file D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\LevelLoader.h.
+ *
+ * Declares the level loader class.
+ */
+
 #ifndef LEVELLOADER_H
+///< .
 #define LEVELLOADER_H
 
 #include <iostream>
@@ -40,24 +47,87 @@ f
 :       :
 */
 
+/** . */
 using namespace std;
+
+/**
+ * A level loader.
+ *
+ * @author Mike De Groot
+ * @date 4-12-2017
+ */
 
 class LevelLoader {
 public:
 
+	/**
+	 * Default constructor.
+	 *
+	 * @author Mike De Groot
+	 * @date 4-12-2017
+	 */
+
 	LevelLoader();
 
+	/**
+	 * Destructor.
+	 *
+	 * @author Mike De Groot
+	 * @date 4-12-2017
+	 */
+
 	virtual ~LevelLoader();
+
+	/**
+	 * Gets the levels.
+	 *
+	 * @author Mike De Groot
+	 * @date 4-12-2017
+	 *
+	 * @return The levels.
+	 */
 
 	vector<vector<vector<char>>> LevelLoader::getLevels();
 
 private:
+	/** Pathname of the directory. */
 	string directory = "./leveldatas/";
 
+	/** all levels. */
 	vector<vector<vector<char>>> allLevels;
+
+	/**
+	 * Loads a file.
+	 *
+	 * @author Mike De Groot
+	 * @date 4-12-2017
+	 *
+	 * @param fileName Filename of the file.
+	 *
+	 * @return The file.
+	 */
+
 	vector<vector<vector<char>>> loadFile(string fileName);
 
+	/**
+	 * Creates the levels.
+	 *
+	 * @author Mike De Groot
+	 * @date 4-12-2017
+	 */
+
 	void createLevels();
+
+	/**
+	 * Saves a file.
+	 *
+	 * @author Mike De Groot
+	 * @date 4-12-2017
+	 *
+	 * @param fileName Filename of the file.
+	 * @param levels   The levels.
+	 */
+
 	void saveFile(string fileName, std::vector<std::vector<std::vector<char>>> levels);
 };
 

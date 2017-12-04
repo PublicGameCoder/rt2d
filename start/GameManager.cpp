@@ -24,7 +24,6 @@ void GameManager::start() {
 	}
 	if (scenes.size() <= 0) {
 		cout << "No levels have been loaded!" << endl;
-		//cout << "Levels: " << scenes.size() << endl;
 		return;
 	}else {
 		cout << scenes.size() << " level(s) have been loaded!" << endl;

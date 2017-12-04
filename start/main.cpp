@@ -1,17 +1,15 @@
 /**
- * Copyright 2015 Your Name <you@yourhost.com>
+ * Copyright 2015 Your Name <mikedegroot1999@hotmail.com>
  *
- * @brief Description of My Awesome Game.
+ * @brief Description of FrogHop.
  *
  * @file main.cpp
  *
- * @mainpage My Awesome Game
+ * @mainpage FrogHop
  *
  * @section intro Introduction
  *
- * Detailed description of My Awesome Game.
- *
- * There's even a second paragraph.
+ * Detailed description of FrogHop.
  */
 
 #include "main.h"

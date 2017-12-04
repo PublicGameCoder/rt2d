@@ -7,7 +7,6 @@ Frog::Frog() : Entity()
 	this->scale = Point3(0.8,0.8,0);
 	this->destination = this->position;
 	this->sprite()->size = Point2(96, 96);
-	//std::cout << "FrogSprite added" << std::endl;
 }
 
 Frog::~Frog()

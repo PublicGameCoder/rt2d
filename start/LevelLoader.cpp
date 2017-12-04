@@ -1,8 +1,5 @@
 #include "LevelLoader.h"
 
-/**
- *	@brief		This is the constructor of this class.
- */
 LevelLoader::LevelLoader() {
 	//createLevels();
 	allLevels = loadFile("00.lvl");//Loads the levels from file path "./leveldatas/00.lvl"

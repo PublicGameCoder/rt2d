@@ -1,20 +1,52 @@
+/**
+ * @file D:\Projecten\Project_RT2D\Game_Emulator\rt2d\start\GridEntity.h.
+ *
+ * Declares the grid entity class.
+ */
+
 #ifndef GRIDENTITY_H
 #define GRIDENTITY_H
 
 #include <rt2d/entity.h>
 
-/// @brief The MyScene class is the Scene implementation.
+/**
+ * The MyScene class is the Scene implementation.
+ *
+ * @author Mike De Groot
+ * @date 4-12-2017
+ */
+
 class GridEntity : public Entity
 {
 public:
-	/// @brief Constructor
+
+	/**
+	 * Constructor.
+	 *
+	 * @author Mike De Groot
+	 * @date 4-12-2017
+	 */
+
 	GridEntity();
-	/// @brief Destructor
+
+	/**
+	 * Destructor.
+	 *
+	 * @author Mike De Groot
+	 * @date 4-12-2017
+	 */
+
 	virtual ~GridEntity();
 
-	/// @brief update is automatically called every frame
-	/// @param deltaTime the elapsed time in seconds
-	/// @return void
+	/**
+	 * update is automatically called every frame.
+	 *
+	 * @author Mike De Groot
+	 * @date 4-12-2017
+	 *
+	 * @param deltaTime the elapsed time in seconds.
+	 */
+
 	virtual void update(float deltaTime);
 
 };
